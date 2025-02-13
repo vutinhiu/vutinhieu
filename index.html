@@ -5,13 +5,14 @@
         
     </head> 
     <body>
-        <audio id="myAudio" src="sound.mp3" autoplay muted></audio>
+        <audio id="myAudio1" src="sound.mp3" autoplay></audio>
         <script>
-          document.addEventListener('DOMContentLoaded', function() {
-            var audio = document.getElementById('myAudio');
-            audio.muted = false;
-            audio.play();
-          });
+          document.addEventListener('click', function() {
+            var audio = document.getElementById('myAudio1');
+            if (audio.paused) {
+              audio.play();
+            }
+          }, { once: true });
         </script>
         <div class="container">
             <div >
